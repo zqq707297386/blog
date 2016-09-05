@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Input;
 
-require_once 'resources/org/code/code.class.php'; //引入第三方类库
+require_once 'resources/org/code/Code.class.php'; //引入第三方类库
 class LoginController extends CommonController
 {
     /**后台登录页
