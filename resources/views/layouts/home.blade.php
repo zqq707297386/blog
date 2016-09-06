@@ -19,14 +19,11 @@
 
 </head>
 <body>
-<!-- gougouimg最大背景图 -->
 <div class="gougouimg">
     <header>
         <nav class="navbar  navbar-fixed-top navbar-inverse" role="navigation">
             <div class="container">
-
                 <div class="navbar-header">
-                    <!-- 页面缩小的时候显示 -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                             data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
@@ -73,7 +70,6 @@
                     <a href="{{url('art/'.$k->art_id)}}" target="_blank" class="list-group-item list-group-item-success">{{$k->art_title}}</a>
                 @endforeach
             </div>
-            <!-- JiaThis Button BEGIN -->
             <div class="jiathis_style_32x32">
                 <a class="jiathis_button_qzone"></a>
                 <a class="jiathis_button_tsina"></a>
@@ -82,13 +78,9 @@
                    target="_blank"></a>
             </div>
             <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
-            <!-- JiaThis Button END -->
         </div>
         @show
-        <!-- 返回顶部 -->
-        <button type="button" id="back-to-top" class="btn btn-info">返回顶部</button>
-        <!-- 返回顶部结束 -->
-    <!-- 底部固定代码 navbar-fixed-bottom -->
+       <button type="button" id="back-to-top" class="btn btn-info">返回顶部</button>
     <footer>
         <div class="main_nav_bottom">
             <nav class="navbar navbar-default navbar-inverse navbar-fixed-bottom">
@@ -104,9 +96,6 @@
             </nav>
         </div>
     </footer>
-
-
 </div>
-<!-- gougouimg最大背景图结束 -->
 </body>
 </html>

@@ -9,7 +9,6 @@
     <script type="text/javascript" src="{{asset('resources/org/layer/layer.js')}}"></script>
 </head>
 <body>
-@yield('content'); {{--这个是后台的父视图模版,这样就不用每次改同样的路径了，直接继承就ok了--}}
-
+@yield('content'); 
 </body>
 </html>
