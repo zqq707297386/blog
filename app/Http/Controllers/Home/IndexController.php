@@ -29,7 +29,7 @@ class IndexController extends CommonController
     public function art($art_id)
     {
         $con = Article::Join('category','article.cate_id','=','category.cate_id')->where('art_id',$art_id)->first();
-        //查看次数自增
+        
         Article::where('art_id',$art_id)->increment('art_view');
         $article['pre'] = Article::where('art_id','<',$art_id)->orderBy('art_id','desc')->first();
         $article['next'] = Article::where('art_id','>',$art_id)->orderBy('art_id','asc')->first();

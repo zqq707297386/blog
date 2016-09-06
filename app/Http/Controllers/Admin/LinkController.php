@@ -12,38 +12,23 @@ use Illuminate\Support\Facades\Validator;
 
 class LinkController extends CommonController
 {
-    /**方法：GET  URL ：admin/link   文章首页
-     * paginate()是分页 
-     * @return mixed
-     */
     public function index()
     {
         $data = Link::orderBy('link_order','asc')->get();
         return view('admin.link.index',compact('data'));
     }
 
-    /**方法：GET URL ：admin/link/create  友情链接显示
-     * @return mixed
-     */
     public function create()
     {
         return view('admin.link.add');
     }
     
-    /**方法：GET  URL ：admin/link/link_id/edit  友情链接编辑
-     * @param $link_id
-     * @return mixed
-     */
     public function edit($link_id)
     {
         $edit = Link::find($link_id);
         return view('admin.link.edit',compact('edit'));
     }
-    
-    /**方法：PUT|PATCH  URL ：admin/link/link_id   友情链接修改
-     * @param $link_id
-     * @return mixed
-     */
+
     public function update($link_id)
     {
         $update = Input::except('_token','_method');
@@ -53,11 +38,7 @@ class LinkController extends CommonController
             return back()->with('errors','未知错误！稍后重试');
         }
     }
-    
-    /**方法：DELETE  URL ： admin/link/link_id  友情链接删除
-     * @param $link_id
-     * @return array
-     */
+
     public function destroy($link_id)
     {
         if (Link::where('link_id',$link_id)->delete()) {
@@ -73,11 +54,7 @@ class LinkController extends CommonController
         }
         return $data;
     }
-    
-    /**方法：POST  URL ：admin/link      添加友情链接
-     * @param Request $request
-     * @return mixed
-     */
+
     public function store(Request $request)
     {
         $link = Input::except('_token');
@@ -121,10 +98,8 @@ class LinkController extends CommonController
         }
         return $data;
     }
-    // 方法：GET  URL ：admin/link/{link}
     public function show($link_id)
     {
-        //
     }
     
 }

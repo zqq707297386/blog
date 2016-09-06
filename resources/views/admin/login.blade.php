@@ -11,10 +11,10 @@
 		<h2>欢迎使用博客管理平台</h2>
 		<div class="form">
 			@if(session('msg'))
-			<p style="color:red">{{session('msg')}}</p>{{--如果session中有信息，则这里会显示内容--}}
+			<p style="color:red">{{session('msg')}}</p>
 			@endif
 			<form action="" method="post">
-				{{csrf_field()}}         {{--这句是防止CSRF 攻击--}}
+				{{csrf_field()}}
 				<ul>
 					<li>
 					<input type="text" name="user_name" class="text"/>
@@ -34,7 +34,7 @@
 					</li>
 				</ul>
 			</form>
-			<p><a href="#">返回首页</a> &copy; 2016 Powered by <a href="http://www.houdunwang.com" target="_blank">http://www.baidu.com</a></p>
+			<p><a href="#">返回首页</a> &copy; 2016 Powered by <a href="http://www.phpchina.com" target="_blank">http://www.phpchina.com</a></p>
 		</div>
 	</div>
 </body>

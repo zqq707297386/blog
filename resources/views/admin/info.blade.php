@@ -1,8 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-	<!--面包屑导航 开始-->
 	<div class="crumb_warp">
-		<!--<i class="fa fa-bell"></i> 欢迎使用登陆网站后台，建站的首选工具。-->
 		<i class="fa fa-home"></i> <a href="{{url('admin/info')}}">首页</a> &raquo;
 	</div>
 
@@ -48,10 +46,9 @@
                     <label>官方交流网站：</label><span><a href="http://www.phpchina.com/">http://www.phpchina.com/</a></span>
                 </li>
                 <li>
-                    <label>官方交流QQ群：</label><span><a href="#"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png"></a></span>
+                    <label>官方交流QQ群：</label><span><a href="#"><img border="0" src=""></a></span>
                 </li>
             </ul>
         </div>
     </div>
-	<!--结果集列表组件 结束-->
 @endsection

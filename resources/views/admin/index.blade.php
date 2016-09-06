@@ -1,7 +1,6 @@
 @extends('layouts.admin')
 @section('content')
     <body>
-    <!--头部 开始-->
     <div class="top_box">
         <div class="top_left">
             <div class="logo">后台管理模板</div>
@@ -18,9 +17,6 @@
             </ul>
         </div>
     </div>
-    <!--头部 结束-->
-
-    <!--左侧导航 开始-->
     <div class="menu_box">
         <ul>
             <li>
@@ -55,17 +51,10 @@
             </li>
         </ul>
     </div>
-    <!--左侧导航 结束-->
-
-    <!--主体部分 开始-->
     <div class="main_box">
         <iframe src="{{url('admin/info')}}" frameborder="0" width="100%" height="100%" name="main"></iframe>
     </div>
-    <!--主体部分 结束-->
-
-    <!--底部 开始-->
     <div class="bottom_box">
         CopyRight © 2016. zqq By <a href="http://www.baidu.com">http://www.baidu.com</a>
     </div>
-    <!--底部 结束-->
 @endsection

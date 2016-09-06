@@ -1,16 +1,10 @@
 @extends('layouts.admin')
 @section('content')
-
-    <!--面包屑导航 开始-->
     <div class="crumb_warp">
-        <!--<i class="fa fa-bell"></i> 欢迎使用登陆网站后台，建站的首选工具。-->
         <i class="fa fa-home"></i>
         <a href="{{url('admin/info')}}">首页</a> &raquo;
         <a href="#">修改文章</a>
     </div>
-    <!--面包屑导航 结束-->
-
-	<!--结果集标题与导航组件 开始-->
 	<div class="result_wrap">
         <div class="result_title">
             @if(count($errors)>0)
@@ -31,8 +25,6 @@
             </div>
         </div>
     </div>
-    <!--结果集标题与导航组件 结束-->
-    
     <div class="result_wrap">
         <form action="{{url('admin/article/'.$art_info->art_id)}}" method="post">
             <input type="hidden" name="_method" value="put">
@@ -81,10 +73,10 @@
                                             '_token'     : '{{csrf_token()}}'
                                         },
                                         'swf'      : "{{asset('resources/org/uploadify/uploadify.swf')}}",
-                                        'uploader' : "{{asset('admin/uploadify')}}", /*上传到哪处理，在Common控制器里*/
+                                        'uploader' : "{{asset('admin/uploadify')}}",
                                         'onUploadSuccess' : function(file, data, response) {
-                                            $('input[name=art_thumb]').val(data) /*给input输入框赋值、data是路径。最终效果。路径会显示在input框内*/
-                                            $('#art_thumb_img').attr('src','/'+data) /*给id为art_thumb_img 的src属性赋路径。这样图片才显示的出*/
+                                            $('input[name=art_thumb]').val(data)
+                                            $('#art_thumb_img').attr('src','/'+data)
                                         }
                                     });
                                 });

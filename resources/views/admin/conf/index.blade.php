@@ -1,20 +1,10 @@
 @extends('layouts.admin')
 @section('content')
-<!--面包屑导航 开始-->
 <div class="crumb_warp">
-    <!--<i class="fa fa-bell"></i> 欢迎使用登陆网站后台，建站的首选工具。-->
     <i class="fa fa-home"></i>
     <a href="{{url('admin/info')}}">首页</a> &raquo;
     <a href="#">网站配置</a>
 </div>
-<!--面包屑导航 结束-->
-
-<!--结果页快捷搜索框 开始-->
-
-<!--结果页快捷搜索框 结束-->
-
-<!--搜索结果页面 列表 开始-->
-
     <div class="result_wrap">
         <div class="result_title">
             @if(count($errors)>0)
@@ -29,13 +19,11 @@
                 </div>
             @endif
         </div>
-        <!--快捷导航 开始-->
         <div class="result_content">
             <div class="short_wrap">
                 <a href="{{url('admin/conf/create')}}"><i class="fa fa-plus"></i>网站配置项添加</a>
             </div>
         </div>
-        <!--快捷导航 结束-->
     </div>
 
     <div class="result_wrap">
@@ -77,16 +65,7 @@
             </form>
         </div>
     </div>
-
-<!--搜索结果页面 列表 结束-->
 <script>
-    /**页面排序号改变的时候调用此异步方法
-     * 思路：传入当前排序号。是一个对象。跟id号
-     *       页面传入的参数  _token:{csrf_token()}}必须得加上。laravel保护机制
-     *       回调函数 如果等于1则表示修改成功
-     * @param obj       $this   表示页面输入的排序号
-     * @param conf_id
-     */
     function changeOrder(obj,conf_id) {
         var conf_order = $(obj).val();
         $.post("{{url('admin/conf/changeOrder')}}",{'_token':'{{csrf_token()}}','conf_order':conf_order,'conf_id':conf_id},function(data) {
@@ -98,10 +77,9 @@
             }
         });
     }
-    //询问框
     function del(conf_id) {
         layer.confirm('确定要删除吗？', {
-            btn: ['确定','取消'] //按钮
+            btn: ['确定','取消']
         }, function(){
             $.post("{{url('admin/conf/')}}/"+conf_id,{'_method':'delete','_token':"{{csrf_token()}}"},function (data) {
                 if (data.re ==1){

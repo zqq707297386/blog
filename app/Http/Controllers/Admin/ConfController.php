@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Validator;
 
 class ConfController extends CommonController
 {
-    /**方法：GET  URL ：admin/conf   自定义导航首页
-     *
-     * @return mixed
-     */
     public function index()
     {
         $data = Conf::orderBy('conf_order','asc')->get();
@@ -43,28 +39,17 @@ class ConfController extends CommonController
         return view('admin.conf.index',compact('data'));
     }
 
-    /**方法：GET URL ：admin/conf/create  自定义导航显示
-     * @return mixed
-     */
     public function create()
     {
         return view('admin.conf.add');
     }
-    
-    /**方法：GET  URL ：admin/conf/conf_id/edit  自定义导航编辑
-     * @param $conf_id
-     * @return mixed
-     */
+
     public function edit($conf_id)
     {
         $edit = Conf::find($conf_id);
         return view('admin.conf.edit',compact('edit'));
     }
     
-    /**方法：PUT|PATCH  URL ：admin/conf/conf_id   自定义导航修改
-     * @param $conf_id
-     * @return mixed
-     */
     public function update($conf_id)
     {
         $update = Input::except('_token','_method');
@@ -76,10 +61,6 @@ class ConfController extends CommonController
         }
     }
     
-    /**方法：DELETE  URL ： admin/conf/conf_id  自定义导航删除
-     * @param $conf_id
-     * @return array
-     */
     public function destroy($conf_id)
     {
         if (Conf::where('conf_id',$conf_id)->delete()) {
@@ -97,10 +78,6 @@ class ConfController extends CommonController
         return $data;
     }
     
-    /**方法：POST  URL ：admin/conf      自定义导航链接
-     * @param Request $request
-     * @return mixed
-     */
     public function store(Request $request)
     {
         $conf = Input::except('_token');
@@ -124,9 +101,6 @@ class ConfController extends CommonController
         }
     }
 
-    /**
-     * 修改内容值
-     */
     public function changeContent()
     {
         $content = Input::all();
@@ -137,15 +111,8 @@ class ConfController extends CommonController
         return back()->with('errors','修改内容成功');
    }
 
-    /**把跟新或修改的内容保存。以便前端读取
-     * 1：pluck()会净化数组形成键值对 不过在5.3会被移除
-     * 2：获得路径，方便创建的时候知道在哪
-     * 3：var_export是把数组连接为字符串
-     * 4：写入到文件里
-     */
     public function createConfigFile()
     {
-        //echo Config::get('web.hello'); 读取配置项 会输出hi
         $conf =Conf::pluck('conf_content','conf_name')->all();
         $path = base_path().'\config\web.php';
         $arr = '<?php return '.var_export($conf,true).';';
@@ -170,10 +137,8 @@ class ConfController extends CommonController
         }
         return $data;
     }
-    // 方法：GET  URL ：admin/conf/{conf}
     public function show($conf_id)
     {
-        //
     }
     
 }

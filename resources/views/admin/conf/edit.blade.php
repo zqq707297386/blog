@@ -1,26 +1,20 @@
 @extends('layouts.admin')
 @section('content')
-
-    <!--面包屑导航 开始-->
     <div class="crumb_warp">
-        <!--<i class="fa fa-bell"></i> 欢迎使用登陆网站后台，建站的首选工具。-->
         <i class="fa fa-home"></i>
         <a href="{{url('admin/info')}}">首页</a> &raquo;
         <a href="#">修改配置项</a>
     </div>
-    <!--面包屑导航 结束-->
-
-	<!--结果集标题与导航组件 开始-->
 	<div class="result_wrap">
         <div class="result_title">
             @if(count($errors)>0)
                 <div class="mark">
-                    @if(is_object($errors))      {{--如果错误不是对象，是字符串。则运行else--}}
+                    @if(is_object($errors))
                     @foreach($errors->all() as $error)
                         <p>{{$error}}</p>
                     @endforeach
                     @else
-                        <p>{{$errors}}</p> {{--这是原密码错误提示--}}
+                        <p>{{$errors}}</p>
                     @endif
                 </div>
             @endif
@@ -31,8 +25,6 @@
             </div>
         </div>
     </div>
-    <!--结果集标题与导航组件 结束-->
-    
     <div class="result_wrap">
         <form action="{{url('admin/conf/'.$edit->conf_id)}}" method="post">
             {{method_field('PUT')}}
@@ -83,18 +75,13 @@
         </form>
     </div>
 <script>
-    /**配置项类型值隐藏与显示
-     * 1：首先获取input下的name，checked是默认选中的 .val()是得到选中的值
-     * 2：判断选中的值是不是radio
-     */
-    showTr()  /*初始化showTr() 让配置项类型值这一行一开始就隐藏*/
+    showTr()
    function showTr() {
        var type = $('input[name=field_type]:checked').val()
-       /*alert(type)*/
        if (type == 'radio'){
-           $('.field_value').show()  /*让配置项类型值这行显示*/
+           $('.field_value').show()
        }else {
-           $('.field_value').hide()  /*让配置项类型值这行不显示*/
+           $('.field_value').hide()
        }
    }
 </script>

@@ -1,7 +1,6 @@
 @extends('layouts.admin')
 @section('content')
 <body>
-    <!--面包屑导航 开始-->
     <div class="crumb_warp">
         <i class="fa fa-home"></i> <a href="{{url('admin/info')}}">首页</a>
     </div>

@@ -12,29 +12,18 @@ use Illuminate\Support\Facades\Validator;
 
 class ArticleController extends CommonController
 {
-    /**方法：GET  URL ：admin/article   文章首页
-     * paginate()是分页 
-     * @return mixed
-     */
     public function index()
     {
         $data = Article::orderBy('art_id','desc')->paginate(8);
         return view('admin.article.index',compact('data'));
     }
 
-    /**方法：GET URL ：admin/article/create  文章分类显示
-     * @return mixed
-     */
     public function create()
     {
         $data = (new Category)->tree();
         return view('admin.article.add',compact('data'));
     }
     
-    /**方法：GET  URL ：admin/article/art_id/edit  文章编辑
-     * @param $art_id
-     * @return mixed
-     */
     public function edit($art_id)
     {
         $data = (new Category)->tree();
@@ -42,10 +31,6 @@ class ArticleController extends CommonController
         return view('admin.article.edit',compact('data','art_info'));
     }
     
-    /**方法：PUT|PATCH  URL ：admin/article/art_id   文章修改
-     * @param $art_id
-     * @return mixed
-     */
     public function update($art_id)
     {
         $update = Input::except('_token','_method');
@@ -56,10 +41,6 @@ class ArticleController extends CommonController
         }
     }
     
-    /**方法：DELETE  URL ： admin/article/art_id  文章删除
-     * @param $art_id
-     * @return array
-     */
     public function destroy($art_id)
     {
         if (Article::where('art_id',$art_id)->delete()) {
@@ -76,10 +57,6 @@ class ArticleController extends CommonController
         return $data;
     }
     
-    /**方法：POST  URL ：admin/article      添加文章
-     * @param Request $request
-     * @return mixed
-     */
     public function store(Request $request)
     {
         $article = Input::except('_token');
@@ -104,10 +81,8 @@ class ArticleController extends CommonController
         }
     }
 
-    // 方法：GET  URL ：admin/article/{article}
     public function show($art_id)
     {
-        //
     }
     
 }
