@@ -56,7 +56,7 @@
             <img src="{{asset('resources/views/home/images/my.jpg')}}" alt="" class="img-circle center-block">
             <li><a href="#">姓名：郑启强</a></li>
             <li><a href="#">地区：广东省</a></li>
-            <li><a href="#">简介：ＩＴ界小菜鸟、有理想，有目标，有斗志的三无青年</a></li>
+            <li><a href="#">简介：ＩＴ界小菜鸟</a></li>
             <li><a href="#">个性签名：什么都不想、什么都不干、什么都不是。</a></li>
             <li><a href="#">QQ：707297386</a></li>
         </ul>
