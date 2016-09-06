@@ -5,7 +5,6 @@
     <meta name="description" content="{{Config::get('web.wen_description')}}"/>
 @endsection
 @section('content')
-    <!-- 中间内容部分 -->
     <div id="banner">
         <div class="inner">
             <p class="sub-heading">hello</p>
@@ -17,16 +16,13 @@
             <div class="links">
                 <button id="sidebar_right" type="button" class="btn btn-success">友情链接</button>
             </div>
-            <!-- 页面滚动图标开始 -->
             <div class="more">
                 <button type="button" class="btn btn-default">
                     <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                 </button>
             </div>
-            <!-- 页面滚动图标结束 -->
         </div>
     </div>
-    <!-- 内容部分开始 -->
     <div id="con">
         <div class="container">
             <h2 id="h2">
@@ -54,8 +50,6 @@
             </div>
         </div>
     </div>
-    <!-- 内容部分结束 -->
-    <!-- 左侧边栏 -->
     <div class="mask"></div>
     <div id="sidebar">
         <ul class="text-center">
@@ -67,8 +61,6 @@
             <li><a href="#">QQ：707297386</a></li>
         </ul>
     </div>
-    <!-- 左侧边栏结束 -->
-    <!-- 右侧边栏 -->
     <div class="maskright"></div>
     <div id="sidebarright">
         <ul class="text-center">
@@ -78,5 +70,4 @@
             @endforeach
         </ul>
     </div>
-    <!-- 右侧边栏结束 -->
 @endsection

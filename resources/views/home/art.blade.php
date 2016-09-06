@@ -5,7 +5,6 @@
     <meta name="description" content="{{$con->cate_description}}" />
 @endsection
 @section('content')
-<!-- 中间内容部分  ./images/gougou.jpg-->
 <div class="content">
 <div class="container">
 <div style="float: right;">
@@ -35,7 +34,6 @@
         </ul>
 </div>
 </div>
-<!-- 内容部分 -->
 <div id="con">
 <div class="container">
 
@@ -69,12 +67,9 @@
                 @endif
             </div>
 	</div>
-
 		</div>
 		@parent
-
 	</div>
 </div>
 </div>
-
 @endsection

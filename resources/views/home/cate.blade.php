@@ -5,7 +5,6 @@
 	<meta name="description" content="{{$cate->cate_description}}" />
 @endsection
 @section('content')
-<!-- 中间内容部分  ./images/gougou.jpg-->
 <div class="content">
 <div class="container">
 <div style="float: right;">
@@ -26,18 +25,14 @@
 			</div>
 			</div>
 <div class="container">
-		
-
  		<ul class="breadcrumb">
  			<li>您当前所在的位置：<a href="{{url('/')}}">首页</a><span class="divider"></span></li>
  			<li><a href="{{url('cate/'.$cate->cate_id)}}">{{$cate->cate_name}}</a></li>
  		</ul>
 </div>
 </div>
-<!-- 内容部分 -->
 <div id="con">
 <div class="container">
-
 	<div class="row">
 		<div class="col-sm-9" id="col">
 		@foreach($newcate as $e)
@@ -56,7 +51,6 @@
 				{{$newcate->links()}}
 			</div>
 		</div>
-
 		@section('fuji')
 			<aside>
 				@if($fuji->all())
@@ -70,10 +64,7 @@
 				@endif
 			</aside>
 		@endsection
-
 		@parent
-
-		
 	</div>
 </div>
 </div>
