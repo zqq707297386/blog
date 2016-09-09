@@ -21,3 +21,4 @@ git clone 后在根目录下执行 composer install
 访问 域名/admin/crypt 
 登录数据库把user表里的用户名（自填）加密后的密码复制到数据库 即可登录后台
 后台访问地址 域名/admin/index  
+
