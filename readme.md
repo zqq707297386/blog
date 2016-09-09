@@ -10,7 +10,7 @@ git clone 后在根目录下执行 composer install
 在config/database.php下找到mysql。把'prefix' => '',改为'prefix' => env('DB_PREFIX', ''),
 数据库前缀DB_PREFIX=可自定义名字 例：test_
 
-创建数据库（最好与自定义前缀相同）例:test
+创建数据库（最好与自定义前缀相同）例:test。 
 执行数据表迁移命令 php artisan migrate 
 
 执行php artisan key:generate 重新生成key
