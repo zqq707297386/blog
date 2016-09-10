@@ -53,12 +53,13 @@
     <div class="mask"></div>
     <div id="sidebar">
         <ul class="text-center">
-            <img src="{{asset('resources/views/home/images/my.jpg')}}" alt="" class="img-circle center-block">
-            <li><a href="#">姓名：郑启强</a></li>
-            <li><a href="#">地区：广东省</a></li>
-            <li><a href="#">简介：ＩＴ界小菜鸟</a></li>
-            <li><a href="#">个性签名：什么都不想、什么都不干、什么都不是。</a></li>
+            <img src="{{asset($ainfo['about_thumb'])}}" width="200" height="200" class="img-circle center-block" style="width: 200px; height: 200px;">
+            <li><a href="#">姓名：{{$ainfo['about_name']}}</a></li>
+            <li><a href="#">地区：{{$ainfo['about_region']}}</a></li>
+            <li><a href="#">简介：{{$ainfo['about_description']}}</a></li>
+            <li><a href="#">个性签名：{{$ainfo['about_autograph']}}</a></li>
             <li><a href="#">QQ：707297386</a></li>
+            <li><a href="https://github.com/zqq707297386" target="_blank">git</a></li>
         </ul>
     </div>
     <div class="maskright"></div>

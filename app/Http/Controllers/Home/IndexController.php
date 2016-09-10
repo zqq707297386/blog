@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
-
-
+use App\Http\Model\About;
 use App\Http\Model\Article;
 use App\Http\Model\Category;
 
@@ -12,7 +11,8 @@ class IndexController extends CommonController
     public function index()
     {
         $list = Article::orderBy('art_time','desc')->paginate(6);
-        return view('home/index',compact('list'));
+        $ainfo = About::first();
+        return view('home/index',compact('list','ainfo'));
     }
 
     public function cate($cate_id)

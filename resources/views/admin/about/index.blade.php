@@ -17,7 +17,8 @@
             <table class="list_tab">
                 <tr>
                     <th class="tc">姓名</th>
-                    <th class="tc">个人简介</th>
+                    <th class="tc">省份</th>
+                    <th class="tc">简介</th>
                     <th class="tc">个性签名</th>
                     <th class="tc">关于我标题</th>
                     <th class="tc">头像</th>
@@ -26,10 +27,13 @@
 
                     <tr>
                         <td class="tc">{{$ainfo['about_title']}}</td>
+                        <td class="tc">{{$ainfo['about_region']}}</td>
                         <td class="tc">{{$ainfo['about_description']}}</td>
                         <td class="tc">{{$ainfo['about_autograph']}}</td>
                         <td class="tc">{{$ainfo['about_title']}}</td>
-                        <td class="tc"><img src="{{url($ainfo['about_thumb'])}}" width="350" height="160"></td>
+                        <td class="tc">
+                            <img src="{{url($ainfo['about_thumb'])}}" width="100%" height="100%" style="width: 200px; height: 200px;">
+                        </td>
                         <td>
                             <a href="{{url('admin/about/'.$ainfo['about_id'].'/edit')}}">修改</a>
                             <a href="javascript:;" onclick="alert('不允许删除')">删除</a>
