@@ -19,6 +19,7 @@
 
 **执行php artisan key:generate 重新生成key**
 
+
     app/Http/Controllers/Admin/LoginController.php
     里的crypt()方法注释去掉 密码自设
        
