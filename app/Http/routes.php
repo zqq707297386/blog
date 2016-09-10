@@ -37,6 +37,6 @@ Route::group(['middleware' => ['web','admin.login'],'prefix'=>'admin','namespace
 
     Route::any('uploadify','CommonController@uploadify');
 
-
+    Route::resource('about', 'AboutController');
 });
 

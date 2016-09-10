@@ -9,12 +9,12 @@
         <div class="result_title">
             @if(count($errors)>0)
                 <div class="mark">
-                    @if(is_object($errors))
+                    @if(is_object($errors))      {{--如果错误不是对象，是字符串。则运行else--}}
                     @foreach($errors->all() as $error)
                         <p>{{$error}}</p>
                     @endforeach
                     @else
-                        <p>{{$errors}}</p>
+                        <p>{{$errors}}</p> {{--这是原密码错误提示--}}
                     @endif
                 </div>
             @endif
@@ -24,7 +24,7 @@
                 <a href="{{url('admin/article')}}"><i class="fa fa-recycle"></i>文章列表</a>
             </div>
         </div>
-    </div> 
+    </div>
     <div class="result_wrap">
         <form action="{{url('admin/article')}}" method="post">
             {{csrf_field()}}
