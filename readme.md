@@ -17,7 +17,6 @@
 
 	执行数据表迁移命令 php artisan migrate
 
-
 **执行php artisan key:generate 重新生成key**
 
     app/Http/Controllers/Admin/LoginController.php
