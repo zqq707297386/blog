@@ -50,25 +50,46 @@
         </strong>
 		  </div>
 		  <p class="lead">{!! $con->art_content !!}</p>
-				<strong>关键字词：{{$con->art_tag}}　</strong>
+			<strong>关键字词：{{$con->art_tag}}　</strong>
             <strong><span>分类：[<a href="{{url('cate/'.$con->cate_id)}}">{{$con->cate_name}}</a>]</span></strong>
-            <div class="nextinfo">
-                <strong>上一篇：
-                    @if($article['pre'])
-                        <a href="{{url('art/'.$article['pre']->art_id)}}">{{$article['pre']->art_title}}　</a></strong>
-                @else
-                    <span>没有上一篇了　</span>
-                @endif
-                <strong>下一篇：
-                    @if($article['next'])
-                        <a href="{{url('art/'.$article['next']->art_id)}}">{{$article['next']->art_title}}</a></strong>
-                @else
-                    <span>　没有下一篇了</span>
-                @endif
-            </div>
+
+	       </div>
+			<div class="jumbotron" >
+				<div id="jum">
+				<strong>上一篇：
+					@if($article['pre'])
+						<a href="{{url('art/'.$article['pre']->art_id)}}">{{$article['pre']->art_title}}　</a></strong>
+				@else
+					<span>没有上一篇了　</span>
+				@endif
+				<strong>下一篇：
+					@if($article['next'])
+						<a href="{{url('art/'.$article['next']->art_id)}}">{{$article['next']->art_title}}</a></strong>
+				@else
+					<span>　没有下一篇了</span>
+				@endif
+				</div>
+			</div>
+			<div class="jumbotron" >
+			<!-- 多说评论框 start -->
+			<div class="ds-thread" data-thread-key="{{$con->cate_id}}" data-title="{{$con->art_title}}" data-url="{{url('art/'.$con->art_id)}}"></div>
+			<!-- 多说评论框 end -->
+			<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+			<script type="text/javascript">
+				var duoshuoQuery = {short_name:"zqqblog"};
+				(function() {
+					var ds = document.createElement('script');
+					ds.type = 'text/javascript';ds.async = true;
+					ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+					ds.charset = 'UTF-8';
+					(document.getElementsByTagName('head')[0]
+					|| document.getElementsByTagName('body')[0]).appendChild(ds);
+				})();
+			</script>
+			<!-- 多说公共JS代码 end -->
+				</div>
 	</div>
-		</div>
-		@parent
+	@parent
 	</div>
 </div>
 </div>
