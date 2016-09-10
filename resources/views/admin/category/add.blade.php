@@ -9,12 +9,12 @@
         <div class="result_title">
             @if(count($errors)>0)
                 <div class="mark">
-                    @if(is_object($errors))      {{--如果错误不是对象，是字符串。则运行else--}}
+                    @if(is_object($errors))
                     @foreach($errors->all() as $error)
                         <p>{{$error}}</p>
                     @endforeach
                     @else
-                        <p>{{$errors}}</p> {{--这是原密码错误提示--}}
+                        <p>{{$errors}}</p>
                     @endif
                 </div>
             @endif

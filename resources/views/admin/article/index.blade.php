@@ -5,25 +5,6 @@
     <a href="{{url('admin/info')}}">首页</a> &raquo;
     <a href="#">文章列表</a>
 </div>
-{{--<div class="search_wrap">
-    <form action="" method="post">
-        <table class="search_tab">
-            <tr>
-                <th width="120">选择分类:</th>
-                <td>
-                    <select onchange="javascript:location.href=this.value;">
-                        <option value="">全部</option>
-                        <option value="http://www.baidu.com">百度</option>
-                        <option value="http://www.sina.com">新浪</option>
-                    </select>
-                </td>
-                <th width="70">关键字:</th>
-                <td><input type="text" name="keywords" placeholder="关键字"></td>
-                <td><input type="submit" name="sub" value="查询"></td>
-            </tr>
-        </table>
-    </form>
-</div>--}}
 <form action="#" method="post">
     <div class="result_wrap">
         <div class="result_content">

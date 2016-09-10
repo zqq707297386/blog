@@ -63,6 +63,7 @@
                 @endforeach
             </div>
             <div class="list-group">
+                <div class="list-group-item list-group-item-success">最新评论
                 <!-- 多说最新评论 start -->
                 <div class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></div>
                 <!-- 多说最新评论 end -->
@@ -78,7 +79,8 @@
                         || document.getElementsByTagName('body')[0]).appendChild(ds);
                     })();
                 </script>
-                <!-- 多说公共JS代码 end --> 
+                <!-- 多说公共JS代码 end -->
+                </div>
             </div>
 
             <div class="jiathis_style_32x32">
