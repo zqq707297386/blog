@@ -2,18 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fda93434-26d7-4f36-a9c4-513bf060b215" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/20160910191151854.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/20160910192616373.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/20160911192906476.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/20160911210105883.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/20160911210132537.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/20160911210225205.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/20160911210236661.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/20160911210248559.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/20160911210308329.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/20160911210322427.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/20160911212744333.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="blog.iws" />
@@ -551,12 +539,12 @@
       <workItem from="1473465294810" duration="5810000" />
       <workItem from="1473472058876" duration="124000" />
       <workItem from="1473486757327" duration="20332000" />
-      <workItem from="1473586172225" duration="16296000" />
+      <workItem from="1473586172225" duration="16743000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="411640000" />
+    <option name="totallyTimeSpent" value="412087000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
