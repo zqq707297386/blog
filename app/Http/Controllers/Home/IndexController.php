@@ -40,6 +40,7 @@ class IndexController extends CommonController
 
     public function about()
     {
-        return view('home/about');
+        $about = $ainfo = About::first();
+        return view('home/about',compact('about',$about));
     }
 }

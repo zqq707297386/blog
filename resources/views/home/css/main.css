@@ -43,11 +43,11 @@ body {
 }
 
 #banner .inner .more {
-    margin-top: 45px
+    margin-top: 85px;
 }
 
 #banner .inner .links {
-    margin-top: 45px
+    margin-top: 45px;
 }
 
 #banner .inner .sub-heading {
@@ -72,7 +72,7 @@ body {
 
 h1 {
     font-family: 郑启强;
-    font-size: 50px
+    font-size: 50px;
 }
 
 .content {

@@ -19,6 +19,10 @@
 					</ul>
 				</section>
 			</div>
+			<ul class="breadcrumb">
+				<li>您当前所在的位置：<a href="{{url('/')}}">首页</a><span class="divider"></span></li>
+				<li><a href="#">about me</a></li>
+			</ul>
 		</div>
 	</div>
 	<div id="con">
@@ -27,9 +31,9 @@
 				<div class="col-sm-9" id="col">
 						<div class="jumbotron text-center">
 							<div class="page-header">
-								<h2 style="color: #007ED1">123123</h2>
+								<h2 style="color: #7FB8D2 ">{{$about['about_title']}}</h2>
 							</div>
-							<p>hello 大家好 我是一名大三的学生hello 大家好 我是一名大三的学生hello 大家好 我是一名大三的学生hello 大家好 我是一名大三的学生</p>
+							<p>{{$about['about_content']}}</p>
 						</div>
 					<div class="jumbotron" >
 						<!-- 多说评论框 start -->
