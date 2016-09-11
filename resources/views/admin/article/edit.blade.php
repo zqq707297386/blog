@@ -56,6 +56,13 @@
                         </td>
                     </tr>
                     <tr>
+                        <th><i class="require"></i>是否推荐：</th>
+                        <td>
+                            <input type="radio" name="r_pic_id" value="0" @if($art_info->r_pic_id == 0) checked @endif>不推荐　
+                            <input type="radio" name="r_pic_id" value="1" @if($art_info->r_pic_id == 1) checked @endif>推荐
+                        </td>
+                    </tr>
+                    <tr>
                         <th>缩略图：</th>
                         <td>
                             {{--文件上传的代码--}}

@@ -9,12 +9,12 @@
         <div class="result_title">
             @if(count($errors)>0)
                 <div class="mark">
-                    @if(is_object($errors))      {{--如果错误不是对象，是字符串。则运行else--}}
+                    @if(is_object($errors))
                     @foreach($errors->all() as $error)
                         <p>{{$error}}</p>
                     @endforeach
                     @else
-                        <p>{{$errors}}</p> {{--这是原密码错误提示--}}
+                        <p>{{$errors}}</p>
                     @endif
                 </div>
             @endif
@@ -49,7 +49,14 @@
                     <tr>
                         <th><i class="require"></i>文章标题：</th>
                         <td>
-                            <input type="text" class="lg" name="art_title" placeholder="文章标题">
+                            <input type="text" class="lg" name="art_title" placeholder="文章标题" required="required">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><i class="require"></i>是否推荐：</th>
+                        <td>
+                            <input type="radio" name="r_pic_id" value="0" checked>不推荐　
+                            <input type="radio" name="r_pic_id" value="1">推荐
                         </td>
                     </tr>
                     <tr>

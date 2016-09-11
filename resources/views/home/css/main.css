@@ -89,16 +89,18 @@ h1 {
 #col {
     padding-top: 20px
 }
-
 #sm {
     padding-top: 20px
 }
-
 #con {
     background: rgba(0, 0, 0, 0.5)
 }
+#picture a img{
+    width: 293px; height: 186px;
+}
 .jumbotron{
     padding-bottom: 15px;
+    word-wrap: break-word;
 }
 #jum{
     margin-top:10px;

@@ -37,4 +37,9 @@ class IndexController extends CommonController
         $article['next'] = Article::where('art_id','>',$art_id)->orderBy('art_id','asc')->first();
         return view('home/art',compact('con','article'));
     }
+
+    public function about()
+    {
+        return view('home/about');
+    }
 }

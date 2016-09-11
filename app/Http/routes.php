@@ -4,6 +4,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/','Home\IndexController@index');
     Route::get('/cate/{cate_id}','Home\IndexController@cate');
     Route::get('/art/{art_id}','Home\IndexController@art');
+    Route::get('/about','Home\IndexController@about');
 
     Route::any('admin/login','Admin\LoginController@login');
     Route::any('admin/code','Admin\LoginController@code');

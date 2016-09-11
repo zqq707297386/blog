@@ -26,6 +26,11 @@ class CommonController extends Controller
         
         $hotclick = Article::orderBy('art_view','desc')->take(6)->get();
         View::share('hotclick',$hotclick);
+        /**
+         * 图片推荐
+         */
+        $r_pic_id = Article::orderBy('art_time','desc')->where('r_pic_id',1)->take(4)->get();
+        View::share('r_pic_id',$r_pic_id);
     }
 
 }

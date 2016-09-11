@@ -24,6 +24,7 @@ class Article extends Migration
             $table->text('art_content')->nullable()->comment('//内容');
             $table->integer('art_view')->default(0)->comment('//查看次数');
             $table->integer('cate_id')->nullable()->comment('//栏目id');
+            $table->tinyInteger('r_pic_id')->nullable()->comment('推荐图片id');
         });
     }
 
