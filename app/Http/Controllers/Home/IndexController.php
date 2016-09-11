@@ -25,7 +25,7 @@ class IndexController extends CommonController
         $fuji = Category::where('cate_pid',$cate_id)->get();
         return view('home/cate',compact('cate','newcate','fuji'));
     }
-
+    
     public function art($art_id)
     {
         $con = Article::Join('category','article.cate_id','=','category.cate_id')->where('art_id',$art_id)->first();

@@ -59,7 +59,7 @@
             <li><a href="#">简介：{{$ainfo['about_description']}}</a></li>
             <li><a href="#">个性签名：{{$ainfo['about_autograph']}}</a></li>
             <li><a href="#">QQ：707297386</a></li>
-            <li><a href="https://github.com/zqq707297386" target="_blank">git</a></li>
+            <li><a href="https://github.com/zqq707297386" target="_blank"> view on github</a></li>
         </ul>
     </div>
     <div class="maskright"></div>

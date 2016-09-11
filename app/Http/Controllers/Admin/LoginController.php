@@ -40,10 +40,5 @@ class LoginController extends CommonController
         session(['user'=>null]);
         return redirect('admin/login');
     }
-
-    // public function crypt()
-    // {
-    //     $jiami = '123456'; //你要设置的密码
-    //     echo Crypt::encrypt($jiami);
-    // ｝
+    
 }

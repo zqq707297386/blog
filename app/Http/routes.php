@@ -7,7 +7,6 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::any('admin/login','Admin\LoginController@login');
     Route::any('admin/code','Admin\LoginController@code');
-//  Route::get('admin/crypt','Admin\LoginController@crypt');
     Route::get('admin/element','Admin\ElementController@element');
 });
 

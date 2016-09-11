@@ -18,15 +18,11 @@
 	执行数据表迁移命令 php artisan migrate
 
 **执行php artisan key:generate 重新生成key**
+	
+	找到database/seeds/user.php 在encrypt()中写入密码
 
+	然后php artisan db:seed --class=user （填充后台登录帐号跟密码）
+    即可登录后台
 
-    app/Http/Controllers/Admin/LoginController.php
-    里的crypt()方法注释去掉 密码自设
-       
-    app/Http/routes.php
-    Route::get('admin/crypt','Admin\LoginController@crypt');注释去掉
-    
-    访问 域名/admin/crypt 
-    登录数据库把user表里的用户名（自填）加密后的密码复制到数据库 即可登录后台
     后台访问地址 域名/admin/index  
 
