@@ -53,7 +53,8 @@
     <div class="mask"></div>
     <div id="sidebar">
         <ul class="text-center">
-            <img src="{{asset($ainfo['about_thumb'])}}" width="200" height="200" class="img-circle center-block" style="width: 200px; height: 200px;">
+            <img src="{{asset($ainfo['about_thumb'])}}" width="200" height="200" class="img-circle center-block"
+                 style="width: 200px; height: 200px;">
             <li><a href="#">姓名：{{$ainfo['about_name']}}</a></li>
             <li><a href="#">地区：{{$ainfo['about_region']}}</a></li>
             <li><a href="#">简介：{{$ainfo['about_description']}}</a></li>

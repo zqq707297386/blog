@@ -2,6 +2,7 @@
 <module version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$/../laravel5.3" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

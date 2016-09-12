@@ -23,7 +23,8 @@
                 <h3><i class="fa fa-fw fa-clipboard"></i>内容管理</h3>
                 <ul class="sub_menu">
                     <li><a href="{{url('admin/about')}}" target="main"><i class="fa fa-fw fa-list-ul"></i>关于我</a></li>
-                    <li><a href="{{url('admin/category')}}" target="main"><i class="fa fa-fw fa-list-ul"></i>分类列表</a></li>
+                    <li><a href="{{url('admin/category')}}" target="main"><i class="fa fa-fw fa-list-ul"></i>分类列表</a>
+                    </li>
                     <li><a href="{{url('admin/article')}}" target="main"><i class="fa fa-fw fa-image"></i>文章列表</a></li>
                 </ul>
             </li>
@@ -31,9 +32,11 @@
                 <h3><i class="fa fa-fw fa-navicon"></i>常用操作</h3>
                 <ul class="sub_menu">
                     {{--<li><a href="{{url('admin/link/create')}}" target="main"><i class="fa fa-fw fa-cubes"></i>添加友情链接</a></li>--}}
-                    <li><a href="{{url('admin/link/')}}" target="main"><i class="fa fa-fw fa-database"></i>友情链接列表</a></li>
+                    <li><a href="{{url('admin/link/')}}" target="main"><i class="fa fa-fw fa-database"></i>友情链接列表</a>
+                    </li>
                     <li><a href="{{url('admin/nav/')}}" target="main"><i class="fa fa-fw fa-database"></i>自定义导航</a></li>
-                    <li><a href="{{url('admin/conf/')}}" target="main"><i class="fa fa-fw fa-database"></i>网站配置项</a></li>
+                    <li><a href="{{url('admin/conf/')}}" target="main"><i class="fa fa-fw fa-database"></i>网站配置项</a>
+                    </li>
                 </ul>
             </li>
             <li>

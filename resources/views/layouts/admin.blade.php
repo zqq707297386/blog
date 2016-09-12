@@ -9,6 +9,6 @@
     <script type="text/javascript" src="{{asset('resources/org/layer/layer.js')}}"></script>
 </head>
 <body>
-@yield('content'); 
+@yield('content');
 </body>
 </html>

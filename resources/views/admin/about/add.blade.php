@@ -60,31 +60,44 @@
                         {{--文件上传的代码--}}
                         <input type="text" size="50" name="about_thumb">
                         <input id="file_upload" name="file_upload" type="file" multiple="true">
-                        <script src="{{asset('resources/org/uploadify/jquery.uploadify.min.js')}}" type="text/javascript"></script>
-                        <link rel="stylesheet" type="text/css" href="{{asset('resources/org/uploadify/uploadify.css')}}">
+                        <script src="{{asset('resources/org/uploadify/jquery.uploadify.min.js')}}"
+                                type="text/javascript"></script>
+                        <link rel="stylesheet" type="text/css"
+                              href="{{asset('resources/org/uploadify/uploadify.css')}}">
                         <script type="text/javascript">
                             <?php $timestamp = time();?>
-                            $(function() {
+                            $(function () {
                                 $('#file_upload').uploadify({
-                                    'buttonText':'头像上传',
-                                    'formData'     : {
-                                        'timestamp' : '<?php echo $timestamp;?>',
-                                        '_token'     : '{{csrf_token()}}'
+                                    'buttonText': '头像上传',
+                                    'formData': {
+                                        'timestamp': '<?php echo $timestamp;?>',
+                                        '_token': '{{csrf_token()}}'
                                     },
-                                    'swf'      : "{{asset('resources/org/uploadify/uploadify.swf')}}",
-                                    'uploader' : "{{asset('admin/uploadify')}}",
-                                    'onUploadSuccess' : function(file, data, response) {
+                                    'swf': "{{asset('resources/org/uploadify/uploadify.swf')}}",
+                                    'uploader': "{{asset('admin/uploadify')}}",
+                                    'onUploadSuccess': function (file, data, response) {
                                         $('input[name=about_thumb]').val(data)
-                                        $('#art_thumb_img').attr('src','/'+data)
+                                        $('#art_thumb_img').attr('src', '/' + data)
                                     }
                                 });
                             });
                         </script>
                         {{--文件上传的样式矫正代码--}}
                         <style>
-                            .uploadify{display:inline-block;}
-                            .uploadify-button{border:none; border-radius:5px; margin-top:8px;}
-                            table.add_tab tr td span.uploadify-button-text{color: #FFF; margin:0;}
+                            .uploadify {
+                                display: inline-block;
+                            }
+
+                            .uploadify-button {
+                                border: none;
+                                border-radius: 5px;
+                                margin-top: 8px;
+                            }
+
+                            table.add_tab tr td span.uploadify-button-text {
+                                color: #FFF;
+                                margin: 0;
+                            }
                         </style>
                     </td>
                 </tr>
@@ -105,19 +118,32 @@
                     <th>关于我内容：</th>
                     <td>
                         {{--富文本所需的所有文件--}}
-                        <script type="text/javascript" charset="utf-8" src="{{asset('resources/org/ueditor/ueditor.config.js')}}"></script>
-                        <script type="text/javascript" charset="utf-8" src="{{asset('resources/org/ueditor/ueditor.all.min.js')}}"></script>
-                        <script type="text/javascript" charset="utf-8" src="{{asset('resources/org/ueditor/lang/zh-cn/zh-cn.js')}}"></script>
-                        <script id="editor" name="about_content" type="text/plain" style="width:800px;height:500px;"></script>
+                        <script type="text/javascript" charset="utf-8"
+                                src="{{asset('resources/org/ueditor/ueditor.config.js')}}"></script>
+                        <script type="text/javascript" charset="utf-8"
+                                src="{{asset('resources/org/ueditor/ueditor.all.min.js')}}"></script>
+                        <script type="text/javascript" charset="utf-8"
+                                src="{{asset('resources/org/ueditor/lang/zh-cn/zh-cn.js')}}"></script>
+                        <script id="editor" name="about_content" type="text/plain"
+                                style="width:800px;height:500px;"></script>
                         <script type="text/javascript">
                             var ue = UE.getEditor('editor');
                         </script>
                         {{--富文本编辑样式的矫正--}}
                         <style>
-                            .edui-default{line-height: 28px;}
-                            div.edui-combox-body,div.edui-button-body,div.edui-splitbutton-body
-                            {overflow: hidden; height:20px;}
-                            div.edui-box{overflow: hidden; height:22px;}
+                            .edui-default {
+                                line-height: 28px;
+                            }
+
+                            div.edui-combox-body, div.edui-button-body, div.edui-splitbutton-body {
+                                overflow: hidden;
+                                height: 20px;
+                            }
+
+                            div.edui-box {
+                                overflow: hidden;
+                                height: 22px;
+                            }
                         </style>
                     </td>
                 </tr>

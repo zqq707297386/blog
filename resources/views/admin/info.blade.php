@@ -1,9 +1,8 @@
 @extends('layouts.admin')
 @section('content')
-	<div class="crumb_warp">
-		<i class="fa fa-home"></i> <a href="{{url('admin/info')}}">首页</a> &raquo;
-	</div>
-
+    <div class="crumb_warp">
+        <i class="fa fa-home"></i> <a href="{{url('admin/info')}}">首页</a> &raquo;
+    </div>
     <div class="result_wrap">
         <div class="result_title">
             <h3>系统基本信息</h3>
@@ -32,13 +31,13 @@
                     <label>Host/Ip</label><span><?PHP echo $_SERVER ['SERVER_ADDR']; ?></span>
                 </li>
                 <li>
-                    <label>上传附件限制</label><span><?PHP echo get_cfg_var ("upload_max_filesize")?get_cfg_var ("upload_max_filesize"):"不允许上传附件"; ?></span>
+                    <label>上传附件限制</label><span><?PHP echo get_cfg_var("upload_max_filesize") ? get_cfg_var("upload_max_filesize") : "不允许上传附件"; ?></span>
                 </li>
                 <li>
                     <label>ZEND版本</label><span><?PHP echo $systemInfo['zendversion'] = zend_version(); ?></span>
                 </li>
                 <li>
-                    <label>脚本运行占用最大内存</label><span><?PHP echo  $systemInfo['memorylimit'] = get_cfg_var("memory_limit") ? get_cfg_var("memory_limit") : '-'; ?></span>
+                    <label>脚本运行占用最大内存</label><span><?PHP echo $systemInfo['memorylimit'] = get_cfg_var("memory_limit") ? get_cfg_var("memory_limit") : '-'; ?></span>
                 </li>
                 <li>
                     <label>北京时间</label><span><?php echo date("Y年-m月-d日 G时:i分:s秒");?></span>
