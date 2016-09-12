@@ -33,7 +33,7 @@
 							<div class="page-header">
 								<h2 style="color: #7FB8D2 ">{{$about['about_title']}}</h2>
 							</div>
-							<p>{{$about['about_content']}}</p>
+							<p>{!! $about['about_content'] !!}</p>
 						</div>
 					<div class="jumbotron" >
 						<!-- 多说评论框 start -->
