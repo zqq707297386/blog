@@ -28,7 +28,7 @@ class AboutController extends CommonController
      */
     public function index ()
     {
-        $ainfo = About::first();
+        $ainfo = About::orderBy('about_id','asc')->get();
         return view('admin.about.index', compact('ainfo'));
     }
 

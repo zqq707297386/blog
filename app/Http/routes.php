@@ -35,8 +35,8 @@ Route::group(['middleware' => ['web','admin.login'],'prefix'=>'admin','namespace
     Route::post('conf/changeOrder','ConfController@changeOrder');
     Route::resource('conf', 'ConfController');
 
+    Route::resource('about', 'AboutController');
     Route::any('uploadify','CommonController@uploadify');
 
-    Route::resource('about', 'AboutController');
 });
 
