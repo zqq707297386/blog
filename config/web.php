@@ -1,7 +1,7 @@
 <?php return array (
   'web_state' => '1',
   'web_Auxiliary_title' => 'website',
-  'web_title' => 'technologblog',
+  'web_title' => 'blog',
   'web_keywords' => 'N、X的技术汇总区',
   'wen_description' => '日常记录strive与technology',
   'CopyRight' => '<script>
