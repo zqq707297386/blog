@@ -70,4 +70,10 @@ class LoginController extends CommonController
         return redirect('admin/login');
     }
 
+//    public function crypt()
+//  {
+//        $jiami = '123456';
+//        echo Crypt::encrypt($jiami);
+//  ｝
+
 }

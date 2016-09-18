@@ -26,7 +26,7 @@
                 </tr>
                 @foreach($ainfo as $a=>$o)
                 <tr>
-                    <td class="tc">{{$o->about_title}}</td>
+                    <td class="tc">{{$o->about_name}}</td>
                     <td class="tc">{{$o->about_region}}</td>
                     <td class="tc">{{$o->about_description}}</td>
                     <td class="tc">{{$o->about_autograph}}</td>

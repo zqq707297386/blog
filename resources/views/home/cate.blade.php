@@ -54,8 +54,7 @@
                             <div class="rnav">
                                 <ul>
                                     @foreach($fuji as $k=>$v)
-                                        <li class="rnav{{$k+1}}"><a href="{{url('cate/'.$v->cate_id)}}"
-                                                                    target="_blank">{{$v->cate_name}}</a></li>
+                                        <li class="rnav{{$k+1}}"><a href="{{url('cate/'.$v->cate_id)}}">{{$v->cate_name}}</a></li>
                                     @endforeach
                                 </ul>
                             </div>

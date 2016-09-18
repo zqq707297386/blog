@@ -34,9 +34,9 @@
                     @foreach($list as $l=>$t)
                         <div class="jumbotron">
                             <div class="page-header">
-                                <a href="{{url('art/'.$t->art_id)}}" target="_blank"><h2>{{$t->art_title}}</h2></a>
+                                <a href="{{url('art/'.$t->art_id)}}"><h2>{{$t->art_title}}</h2></a>
                             </div>
-                            <a href="{{url('art/'.$t->art_id)}}" target="_blank"><p>{{$t->art_description}}.....</p></a>
+                            <a href="{{url('art/'.$t->art_id)}}"><p>{{$t->art_description}}.....</p></a>
                             <span class="glyphicon glyphicon-time"></span>
                             <strong><span>发布时间：{{date('Y-m-d',$t->art_time)}},</span></strong>
                             <strong><span>编辑者：{{$t->art_editor}}</span></strong>

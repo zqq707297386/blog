@@ -34,7 +34,7 @@
                 <tr>
                     <th>姓名：</th>
                     <td>
-                        <input type="text" name="about_name" value="{{$ainfo->about_title}}">
+                        <input type="text" name="about_name" value="{{$ainfo->about_name}}">
                     </td>
                 </tr>
                 <tr>
@@ -59,7 +59,7 @@
                     <th>头像：</th>
                     <td>
                         {{--文件上传的代码--}}
-                        <input type="text" size="50" name="about_thumb">
+                        <input type="text" size="50" name="about_thumb" value="{{$ainfo->about_thumb}}">
                         <input id="file_upload" name="file_upload" type="file" multiple="true">
                         <script src="{{asset('resources/org/uploadify/jquery.uploadify.min.js')}}"
                                 type="text/javascript"></script>

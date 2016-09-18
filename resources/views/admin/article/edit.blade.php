@@ -113,7 +113,7 @@
                     <th></th>
                     {{--缩略图的显示位置。加最大宽高，以免图片过大，页面变形--}}
                     <td>
-                        <img src="/{{$art_info->art_thumb}}" alt="" id="art_thumb_img"
+                        <img src="{{url($art_info->art_thumb)}}" alt="" id="art_thumb_img"
                              style="max-width: 350px; max-height: 100px">
                     </td>
                 </tr>

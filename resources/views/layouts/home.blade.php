@@ -36,7 +36,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         @foreach($nav as $n=>$v)
-                            <li><a href="{{url($v->nav_url)}}" target="_blank">{{$v->nav_name}}</a></li>
+                            <li><a href="{{url($v->nav_url)}}">{{$v->nav_name}}</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -49,16 +49,14 @@
                 @yield('fuji')
                 <strong class="list-group-item list-group-item-info">文章<span>列表</span></strong>
                 @foreach($new as $n =>$w)
-                    <a href="{{url('art/'.$w->art_id)}}" target="_blank"
-                       class="list-group-item list-group-item-success">{{$w->art_title}}</a>
+                    <a href="{{url('art/'.$w->art_id)}}" class="list-group-item list-group-item-success">{{$w->art_title}}</a>
                 @endforeach
             </div>
 
             <div class="list-group">
                 <strong class="list-group-item list-group-item-info">点击<span>排行</span></strong>
                 @foreach($hotclick as $h => $k)
-                    <a href="{{url('art/'.$k->art_id)}}" target="_blank"
-                       class="list-group-item list-group-item-success">{{$k->art_title}}</a>
+                    <a href="{{url('art/'.$k->art_id)}}" class="list-group-item list-group-item-success">{{$k->art_title}}</a>
                 @endforeach
             </div>
 

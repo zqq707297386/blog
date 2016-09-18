@@ -16,13 +16,12 @@
     创建数据库（最好与自定义前缀相同）例:test。
 
 	执行数据表迁移命令 php artisan migrate
+	
+	然后php artisan db:seed --class=user （填充后台登录帐号跟密码）
 
 **执行php artisan key:generate 重新生成key**
 	
-	找到database/seeds/user.php 在encrypt()中写入密码
-
-	然后php artisan db:seed --class=user （填充后台登录帐号跟密码）
-    即可登录后台
-
+	登录后出现the mac is invalid就把admin/crypt路由注释去掉
+	LoginController里的crypt()注释去掉，执行此方法重新把加密后的密码复制进数据库
     后台访问地址 域名/admin/index  
 
