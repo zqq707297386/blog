@@ -67,27 +67,18 @@
                 <a href="" class=""
                    target="_blank"></a>
             </div>
-            <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+          
 
         </div>
     @show
     <button type="button" id="back-to-top" class="btn btn-info">返回顶部</button>
-
 </div>
+</body>
 <footer>
     <div class="main_nav_bottom">
-        <nav class="navbar navbar-default navbar-inverse navbar-fixed-bottom">
-            <div class="container" align="center">
-                <ul class="nav nav-tabs nav-tabs-justified">
-                    <div class="row" align="center">
-                        <div align="center">
-                            <li><p style="color: white">{!! Config::get('web.CopyRight') !!}</p></li>
-                        </div>
-                    </div>
-                </ul>
-            </div>
-        </nav>
+       <ul class="copy" align="center">
+           <li><p>{!! Config::get('web.CopyRight') !!}</p></li>
+      </ul>
     </div>
 </footer>
-</body>
 </html>
