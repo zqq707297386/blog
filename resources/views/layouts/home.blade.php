@@ -7,9 +7,12 @@
     @yield('info')
     <link href="{{asset('resources/views/home/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('resources/views/home/css/main.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('resources/views/home/css/share.min.css')}}" rel="stylesheet">
     <script src="{{asset('resources/views/home/js/jquery-1.11.1.min.js')}}"></script>
     <script src="{{asset('resources/views/home/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('resources/views/home/js/main.js')}}"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/1.8.2/jquery.js"></script>
+    <script src="{{asset('resources/views/home/js/jquery.share.min.js')}}"></script>
     <!--[if lt IE 9]>
     <script src="{{asset('resources/views/home/js/html5shiv.js')}}"></script>
     <script src="{{asset('resources/views/home/js/respond.min.js')}}"></script>
@@ -60,14 +63,9 @@
                 @endforeach
             </div>
 
-            <div class="jiathis_style_32x32">
-                <a class="jiathis_button_qzone"></a>
-                <a class="jiathis_button_tsina"></a>
-                <a class="jiathis_button_weixin"></a>
-                <a href="" class=""
-                   target="_blank"></a>
+            <div class="social-share" data-mode="prepend">
+              <a href="javascript:" class="icon icon-heart"></a>
             </div>
-          
 
         </div>
     @show
