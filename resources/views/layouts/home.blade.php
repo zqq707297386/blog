@@ -76,7 +76,7 @@
 </div>
 <footer>
     <div class="main_nav_bottom">
-        <nav class="navbar navbar-default navbar-inverse ">
+        <nav class="navbar navbar-default navbar-inverse navbar-fixed-bottom">
             <div class="container" align="center">
                 <ul class="nav nav-tabs nav-tabs-justified">
                     <div class="row" align="center">
