@@ -81,7 +81,7 @@
                 <ul class="nav nav-tabs nav-tabs-justified">
                     <div class="row" align="center">
                         <div align="center">
-                            <li><a href="#">百度：{!! Config::get('web.CopyRight') !!}</a>　<a href="/">网站统计</a></li>
+                            <li><p style="color: white">{!! Config::get('web.CopyRight') !!}</p></li>
                         </div>
                     </div>
                 </ul>
