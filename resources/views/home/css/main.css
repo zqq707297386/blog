@@ -71,9 +71,6 @@ body {
 	margin: 0
 }
 
-@font-face {
-	font-family:hello;src:url(../fonts/zqq.ttf)
-}
 
 h1 {
 	font-family: hello;

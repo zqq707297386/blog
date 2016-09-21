@@ -7,7 +7,7 @@
 @section('content')
     <div id="banner">
         <div class="inner">
-            <p class="sub-heading">hello</p>
+            <p class="sub-heading">人生在勤，不索何获</p>
             <hr class="hr">
             <h1>Welcome to My BLOG</h1>
             <hr>
