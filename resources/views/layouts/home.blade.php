@@ -11,7 +11,7 @@
     <script src="{{asset('resources/views/home/js/jquery-1.11.1.min.js')}}"></script>
     <script src="{{asset('resources/views/home/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('resources/views/home/js/main.js')}}"></script>
-    <script src="http://apps.bdimg.com/libs/jquery/1.8.2/jquery.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/1.8.2/jquery.js"></script>
     <script src="{{asset('resources/views/home/js/jquery.share.min.js')}}"></script>
     <!--[if lt IE 9]>
     <script src="{{asset('resources/views/home/js/html5shiv.js')}}"></script>
@@ -48,6 +48,7 @@
     </header>
     @section('content')
         <div class="col-sm-3" id="sm">
+
             <div class="list-group">
                 @yield('fuji')
                 <strong class="list-group-item list-group-item-info">文章<span>列表</span></strong>
@@ -62,9 +63,10 @@
                     <a href="{{url('art/'.$k->art_id)}}" class="list-group-item list-group-item-success">{{$k->art_title}}</a>
                 @endforeach
             </div>
-
-            <div class="social-share" data-mode="prepend">
-              <a href="javascript:" class="icon icon-heart"></a>
+            <div class="list-group">
+               <div class="social-share" data-mode="prepend">
+                 <a href="javascript:" class="icon icon-heart"></a>
+               </div>
             </div>
 
         </div>

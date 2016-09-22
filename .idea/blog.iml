@@ -4,5 +4,7 @@
     <content url="file://$MODULE_DIR$" />
     <content url="file://$MODULE_DIR$/../laravel5.3" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="vue-resource" level="application" />
+    <orderEntry type="library" name="vue" level="application" />
   </component>
 </module>

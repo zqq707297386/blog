@@ -74,6 +74,6 @@ class LoginController extends CommonController
 //  {
 //        $jiami = '123456';
 //        echo Crypt::encrypt($jiami);
-//  ｝
+//  }
 
 }
