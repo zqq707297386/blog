@@ -17,7 +17,8 @@
     <script src="{{asset('resources/views/home/js/html5shiv.js')}}"></script>
     <script src="{{asset('resources/views/home/js/respond.min.js')}}"></script>
     <![endif]-->
-
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="bookmark" href="/favicon.ico"/>
 
 </head>
 <body>

@@ -6,7 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 class Link extends Migration
 {
     /**
-     * Run the migrations.
+     * 友情链接
      *
      * @return void
      */
@@ -15,10 +15,10 @@ class Link extends Migration
         Schema::create('link', function (Blueprint $table) {
             $table->engine = 'MyISAM';
             $table->increments('link_id');
-            $table->string('link_name')->default('');
-            $table->string('link_title')->default('');
-            $table->string('link_url')->default('');
-            $table->integer('link_order')->default(0);
+            $table->string('link_name')->default('')->comment('友情链接名称');
+            $table->string('link_title')->default('')->comment('标题');
+            $table->string('link_url')->default('')->comment('URL');
+            $table->integer('link_order')->default(0)->comment('排序');
         });
     }
 

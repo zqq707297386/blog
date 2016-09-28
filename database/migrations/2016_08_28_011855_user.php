@@ -6,7 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 class User extends Migration
 {
     /**
-     * Run the migrations.
+     * 后台登录
      *
      * @return void
      */
@@ -15,8 +15,8 @@ class User extends Migration
         Schema::create('user', function (Blueprint $table) {
             $table->engine = 'MyISAM';
             $table->increments('user_id');
-            $table->string('user_name',55)->nullable()->comment('//用户名');
-            $table->string('user_pass')->nullable()->comment('//用户密码');
+            $table->string('user_name',55)->nullable()->comment('用户名');
+            $table->string('user_pass')->nullable()->comment('用户密码');
         });
     }
 
